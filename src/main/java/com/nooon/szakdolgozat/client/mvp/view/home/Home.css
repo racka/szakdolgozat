@@ -1,0 +1,13 @@
+.main {
+    padding: 0px;
+    border: 0px;
+}
+
+.appengine {
+    text-align: center;
+    opacity: 0.20; /*css standard*/
+    filter:alpha(opacity=20); /*ie (note that 50% is 25 here, not .25)*/
+    -moz-opacity:0.20; /*very old mozilla/netscape browsers*/
+    -khtml-opacity: 0.20; /*very old safari browsers*/
+}
+

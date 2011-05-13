@@ -1,0 +1,1 @@
+A resource mappa alatt levo public van hasznalatban
