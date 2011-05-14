@@ -1,4 +1,4 @@
-package com.nooon.szakdolgozat.client.domainlogic;
+package com.nooon.szakdolgozat.client.rpc.thirdparty;
 
 import com.google.gwt.core.client.JavaScriptObject;
 

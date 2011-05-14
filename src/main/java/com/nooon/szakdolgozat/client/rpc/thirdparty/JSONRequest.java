@@ -1,4 +1,4 @@
-package com.nooon.szakdolgozat.client.domainlogic;
+package com.nooon.szakdolgozat.client.rpc.thirdparty;
 
 public class JSONRequest {
     public static void get(String url, JSONRequestHandler handler) {
@@ -20,8 +20,13 @@ public class JSONRequest {
 
     private native static void createCallbackFunction(JSONRequestHandler obj, String callbackName)/*-{
         tmpcallback = function(j) {
-          obj.@com.nooon.szakdolgozat.client.domainlogic.JSONRequestHandler::onRequestComplete(Lcom/google/gwt/core/client/JavaScriptObject;)(j);
+          obj.@com.nooon.szakdolgozat.client.rpc.thirdparty.JSONRequestHandler::onRequestComplete(Lcom/google/gwt/core/client/JavaScriptObject;)(j);
         };
         eval( "window." + callbackName + "=tmpcallback" );
     }-*/;
+
+//JSONRequest.get(
+//"http://gdata.youtube.com/feeds/api/users/bogleg/uploads?alt=json-in-script&callback=",
+//new JSONRequestHandler() { ... });
+
 }

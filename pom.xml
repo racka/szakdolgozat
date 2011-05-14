@@ -19,6 +19,14 @@
         </pluginRepository>
     </pluginRepositories>
 
+    <!-- GWT JSON
+    <repositories>
+        <repository>
+            <id>gwtprojsonserializer</id>
+            <url>http://gwtprojsonserializer.googlecode.com/svn/repo</url>
+        </repository>
+    </repositories>
+    -->
 
     <build>
         <pluginManagement>
@@ -75,7 +83,7 @@
                     <disableCastChecking>true</disableCastChecking>
                     <disableClassMetadata>true</disableClassMetadata>
                     <extraJvmArgs>-Xmx512M -Xss1024k -Dgwt.nowarn.legacy.tools</extraJvmArgs>
-                    <runTarget>com.nooon.szakdolgozat.Application/Application.html</runTarget>
+                    <runTarget>szakdolgozat/Application.html</runTarget>
                     <noserver>true</noserver>
                 </configuration>
                 <executions>
@@ -125,6 +133,13 @@
             <artifactId>appengine-api-1.0-sdk</artifactId>
             <version>${google.appengine.version}</version>
         </dependency>
+        <!--
+        <dependency>
+            <groupId>com.kfuntak.gwt.json</groupId>
+            <artifactId>gwtprojsonserializer</artifactId>
+            <version>1.0.4</version>
+        </dependency>
+        -->
     </dependencies>
 
     <properties>
