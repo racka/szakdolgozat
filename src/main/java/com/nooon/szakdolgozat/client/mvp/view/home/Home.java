@@ -4,7 +4,7 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.rpc.*;
 import com.google.gwt.user.client.ui.AbsolutePanel;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
@@ -41,10 +41,7 @@ public class Home extends Composite {
 
         mainAbsolutePanel.setSize(CSS.maxWidth(), CSS.maxHeight());
 
-        //Window.alert(new JSONObject(DummyJSO.buildFromJSON("{\"attr\":\"Ez lesz az attributumban\"}")).toString());
-
         domainLogic();
-
     }
 
     /**
@@ -52,14 +49,41 @@ public class Home extends Composite {
      */
     private void domainLogic() {
 
+        // XSRF token elkeszitese
+        XsrfTokenServiceAsync xsrf = (XsrfTokenServiceAsync) GWT.create(XsrfTokenService.class);
+        ((ServiceDefTarget) xsrf).setServiceEntryPoint(GWT.getModuleBaseURL() + "xsrf");
+
+
+        xsrf.getNewXsrfToken(new AsyncCallback<XsrfToken>() {
+
+            public void onSuccess(XsrfToken token) {
+                ((HasRpcToken) dummyService).setRpcToken(token);
+                dummyServiceInvocation();
+            }
+
+            public void onFailure(Throwable caught) {
+                Window.alert(caught.getMessage());
+            }
+
+        });
+
+    }
+
+    /**
+     * sajat service hivasa
+     */
+    private void dummyServiceInvocation() {
+        // rpc parameter elkeszitese
         final IDummyServerAutoBeanFactory abFactory = GWT.create(IDummyServerAutoBeanFactory.class);
         AutoBean<IDummyServerRequest> requestAutoBean = abFactory.request();
         IDummyServerRequest request = requestAutoBean.as();
         request.setRequestParameter("Valentino Rossi");
 
+        // rpc parameter serializalasa
         AutoBean<IDummyServerRequest> controller = AutoBeanUtils.getAutoBean(request);
         String jsonParameter = AutoBeanCodex.encode(controller).getPayload();
 
+        // rpc hivas
         dummyService.dummyFunction(
                 jsonParameter,
                 new AsyncCallback<String>() {
@@ -84,6 +108,7 @@ public class Home extends Composite {
      * @param target
      * @param targetX
      */
+
     private void verticalClientScroll(Widget target, int targetX) {
         moveClientTo(target, targetX, mainAbsolutePanel.getWidgetTop(target), 1000);
 

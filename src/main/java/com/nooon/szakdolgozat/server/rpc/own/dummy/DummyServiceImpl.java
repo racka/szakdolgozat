@@ -1,6 +1,6 @@
 package com.nooon.szakdolgozat.server.rpc.own.dummy;
 
-import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+import com.google.gwt.user.server.rpc.XsrfProtectedServiceServlet;
 import com.google.web.bindery.autobean.shared.AutoBean;
 import com.google.web.bindery.autobean.shared.AutoBeanCodex;
 import com.google.web.bindery.autobean.shared.AutoBeanUtils;
@@ -10,7 +10,7 @@ import com.nooon.szakdolgozat.client.shared.overlay.IDummyServerAutoBeanFactory;
 import com.nooon.szakdolgozat.client.shared.overlay.IDummyServerRequest;
 import com.nooon.szakdolgozat.client.shared.overlay.IDummyServerResponse;
 
-public class DummyServiceImpl extends RemoteServiceServlet implements DummyService {
+public class DummyServiceImpl extends XsrfProtectedServiceServlet implements DummyService {
 
     public String dummyFunction(String paramJson) {
 
