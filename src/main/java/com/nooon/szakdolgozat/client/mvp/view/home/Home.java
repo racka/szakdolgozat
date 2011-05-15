@@ -1,7 +1,6 @@
 package com.nooon.szakdolgozat.client.mvp.view.home;
 
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.Window;
@@ -9,12 +8,17 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.AbsolutePanel;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
+import com.google.web.bindery.autobean.shared.AutoBean;
+import com.google.web.bindery.autobean.shared.AutoBeanCodex;
+import com.google.web.bindery.autobean.shared.AutoBeanUtils;
 import com.nooon.szakdolgozat.client.mvp.model.visualprocess.ScrollAnimation;
 import com.nooon.szakdolgozat.client.resource.SzakdolgozatStyleSheet;
 import com.nooon.szakdolgozat.client.resource.bundle.SzakdolgozatClientBundle;
-import com.nooon.szakdolgozat.client.rpc.own.dummy.DummyJSO;
 import com.nooon.szakdolgozat.client.rpc.own.dummy.DummyService;
 import com.nooon.szakdolgozat.client.rpc.own.dummy.DummyServiceAsync;
+import com.nooon.szakdolgozat.client.shared.overlay.IDummyServerAutoBeanFactory;
+import com.nooon.szakdolgozat.client.shared.overlay.IDummyServerRequest;
+import com.nooon.szakdolgozat.client.shared.overlay.IDummyServerResponse;
 
 
 public class Home extends Composite {
@@ -24,7 +28,9 @@ public class Home extends Composite {
 
     private static StartFrameUIBinder uiBinder = GWT.create(StartFrameUIBinder.class);
 
-    private SzakdolgozatStyleSheet CSS = SzakdolgozatClientBundle.INSTANCE.constantsCSS();
+    private final SzakdolgozatStyleSheet CSS = SzakdolgozatClientBundle.INSTANCE.constantsCSS();
+
+    private final DummyServiceAsync dummyService = GWT.create(DummyService.class);
 
 
     @UiField
@@ -37,17 +43,38 @@ public class Home extends Composite {
 
         //Window.alert(new JSONObject(DummyJSO.buildFromJSON("{\"attr\":\"Ez lesz az attributumban\"}")).toString());
 
-        DummyServiceAsync dummyService = GWT.create(DummyService.class);
+        domainLogic();
 
-        dummyService.dummyFunction(new AsyncCallback<JSONObject>() {
-            public void onFailure(Throwable caught) {
-                Window.alert("HIBA");
-            }
+    }
 
-            public void onSuccess(JSONObject result) {
-                Window.alert(result.toString());
-            }
-        });
+    /**
+     * Az uzleti logika
+     */
+    private void domainLogic() {
+
+        final IDummyServerAutoBeanFactory abFactory = GWT.create(IDummyServerAutoBeanFactory.class);
+        AutoBean<IDummyServerRequest> requestAutoBean = abFactory.request();
+        IDummyServerRequest request = requestAutoBean.as();
+        request.setRequestParameter("Valentino Rossi");
+
+        AutoBean<IDummyServerRequest> controller = AutoBeanUtils.getAutoBean(request);
+        String jsonParameter = AutoBeanCodex.encode(controller).getPayload();
+
+        dummyService.dummyFunction(
+                jsonParameter,
+                new AsyncCallback<String>() {
+                    public void onFailure(Throwable throwable) {
+                        Window.alert(throwable.getMessage());
+                    }
+
+                    public void onSuccess(String jsonObject) {
+
+                        AutoBean<IDummyServerResponse> responseAutoBean = AutoBeanCodex.decode(abFactory, IDummyServerResponse.class, jsonObject);
+                        IDummyServerResponse response = responseAutoBean.as();
+
+                        Window.alert(response.getResponse());
+                    }
+                });
 
     }
 

@@ -2,23 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ec2c049-97aa-4c7f-9289-48ac90a678db" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/own/dummy/DummyJSO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/own/dummy/DummyService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/own/dummy/DummyServiceAsync.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/server/rpc/own/dummy/DummyServiceImpl.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/WEB-INF/appengine-web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/WEB-INF/sun-web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/WEB-INF/web.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/domainlogic/JSONRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/thirdparty/JSONRequest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/domainlogic/JSONRequestHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/thirdparty/JSONRequestHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/shared/overlay/IDummyServerAutoBeanFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/shared/overlay/IDummyServerRequest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/shared/overlay/IDummyServerResponse.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/own/dummy/DummyJSO.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/mvp/view/home/Home.java" afterPath="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/mvp/view/home/Home.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/own/dummy/DummyService.java" afterPath="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/own/dummy/DummyService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/own/dummy/DummyServiceAsync.java" afterPath="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/own/dummy/DummyServiceAsync.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/server/rpc/own/dummy/DummyServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/server/rpc/own/dummy/DummyServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/nooon/szakdolgozat/Application.gwt.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/nooon/szakdolgozat/Application.gwt.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/nooon/szakdolgozat/public/Application.html" afterPath="$PROJECT_DIR$/src/main/resources/com/nooon/szakdolgozat/public/Application.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/szakdolgozat.iml" afterPath="$PROJECT_DIR$/szakdolgozat.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/szakdolgozat.ipr" afterPath="$PROJECT_DIR$/szakdolgozat.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/szakdolgozat.iws" afterPath="$PROJECT_DIR$/szakdolgozat.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/war/WEB-INF/web.xml" />
     </list>
     <ignored path="szakdolgozat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,6 +33,21 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints>
+      <breakpoint url="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-dev/2.3.0/gwt-dev-2.3.0-sources.jar!/com/google/gwt/dev/shell/CompilingClassLoader.java" line="364" class="com.google.gwt.dev.shell.CompilingClassLoader.MultiParentClassLoader" package="com.google.gwt.dev.shell">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -77,50 +88,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DummyServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/server/rpc/own/dummy/DummyServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="14" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JSONObject.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-user/2.2.0/gwt-user-2.2.0-sources.jar!/com/google/gwt/json/client/JSONObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="16" selection-start="1634" selection-end="1634" vertical-scroll-proportion="-1.0518054">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DummyService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/own/dummy/DummyService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="14" selection-start="331" selection-end="331" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DummyServiceAsync.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/own/dummy/DummyServiceAsync.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="47" selection-start="357" selection-end="357" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Home.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/mvp/view/home/Home.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="46" selection-start="1862" selection-end="1862" vertical-scroll-proportion="0.0">
+            <state line="55" column="69" selection-start="2175" selection-end="2175" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,37 +99,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="IDummyServerAutoBeanFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/shared/overlay/IDummyServerAutoBeanFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="23" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IDummyServerRequest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/shared/overlay/IDummyServerRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="17" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IDummyServerResponse.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/shared/overlay/IDummyServerResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="36" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompilingClassLoader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-dev/2.3.0/gwt-dev-2.3.0-sources.jar!/com/google/gwt/dev/shell/CompilingClassLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="364" column="30" selection-start="13212" selection-end="13212" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="136" selection-start="2801" selection-end="2801" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Application.gwt.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/nooon/szakdolgozat/Application.gwt.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="49" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Application.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/nooon/szakdolgozat/public/Application.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="148" selection-start="761" selection-end="761" vertical-scroll-proportion="-10.666667">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JSONRequest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/thirdparty/JSONRequest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.0">
+            <state line="92" column="55" selection-start="3707" selection-end="3707" vertical-scroll-proportion="0.36225265">
               <folding />
             </state>
           </provider>
@@ -178,22 +160,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/dummyservice/DummyJSONResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/dummyservice/DummyResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/dummyservice/DummyService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/server/rpc/dummyservice/DummyServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/dummyservice/DummyJSO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/thirdparty/JSONRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/server/rpc/local/DummyServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/server/rpc/own/DummyServiceImpl.java" />
-        <option value="$PROJECT_DIR$/war/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/nooon/szakdolgozat/Application.gwt.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/nooon/szakdolgozat/public/Application.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/server/rpc/own/dummy/DummyServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/shared/overlay/JSO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/shared/overlay/DummyServiceResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/own/dummy/DummyService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/own/dummy/DummyServiceAsync.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/own/dummy/DummyServiceResultJSO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/own/dummy/DummyServiceResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/own/dummy/DummyServiceParameter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/own/dummy/DummyServiceRequestParameter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/own/dummy/DummyServiceResponseParameter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/shared/overlay/IDummyServerAutoBeanFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/shared/overlay/IDummyServerRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/shared/overlay/IDummyServerResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/server/rpc/own/dummy/DummyServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/nooon/szakdolgozat/Application.gwt.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/mvp/view/home/Home.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -281,109 +263,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szakdolgozat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szakdolgozat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szakdolgozat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szakdolgozat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nooon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szakdolgozat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szakdolgozat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szakdolgozat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nooon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szakdolgozat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rpc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="own" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dummy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -497,199 +381,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="rpc" />
+              <option name="myItemId" value="shared" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="thirdparty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szakdolgozat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szakdolgozat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nooon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szakdolgozat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rpc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="own" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dummy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szakdolgozat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szakdolgozat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nooon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szakdolgozat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mvp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szakdolgozat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szakdolgozat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nooon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szakdolgozat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mvp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szakdolgozat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szakdolgozat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nooon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szakdolgozat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mvp" />
+              <option name="myItemId" value="overlay" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -848,7 +544,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944608" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39941692" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2696793" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -900,120 +596,120 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/mvp/view/home/Home.ui.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-user/2.3.0/gwt-user-2.3.0.jar!/com/google/gwt/autobean/server/AutoBeanFactoryMagic.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="8" selection-start="503" selection-end="503" vertical-scroll-proportion="0.27701673">
+        <state line="9" column="13" selection-start="213" selection-end="213" vertical-scroll-proportion="0.21035059">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-user/2.2.0/gwt-user-2.2.0.jar!/com/google/gwt/json/client/JSONObject.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/server/rpc/own/dummy/DummyServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="164" selection-end="164" vertical-scroll-proportion="0.1107595">
+        <state line="27" column="33" selection-start="1426" selection-end="1426" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-user/2.3.0/gwt-user-2.3.0-sources.jar!/com/google/gwt/autobean/server/AutoBeanFactoryMagic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-user/2.2.0/gwt-user-2.2.0.jar!/com/google/gwt/json/client/JSONValue.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-user/2.3.0/gwt-user-2.3.0-sources.jar!/com/google/web/bindery/autobean/shared/AutoBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="27" selection-start="178" selection-end="178" vertical-scroll-proportion="0.1107595">
+        <state line="29" column="17" selection-start="1063" selection-end="1063" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-user/2.2.0/gwt-user-2.2.0-sources.jar!/com/google/gwt/json/client/JSONValue.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-dev/2.3.0/gwt-dev-2.3.0.jar!/com/google/gwt/core/ext/typeinfo/JClassType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.36225265">
+        <state line="19" column="41" selection-start="699" selection-end="699" vertical-scroll-proportion="0.3956044">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/own/dummy/DummyJSO.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-dev/2.3.0/gwt-dev-2.3.0.jar!/com/google/gwt/core/ext/typeinfo/JClassType.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="21" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
+        <state line="5" column="17" selection-start="174" selection-end="174" vertical-scroll-proportion="0.11686143">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/WEB-INF/web.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-dev/2.3.0/gwt-dev-2.3.0.jar!/com/google/gwt/core/ext/typeinfo/HasAnnotations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="47" selection-start="761" selection-end="761" vertical-scroll-proportion="0.0">
+        <state line="26" column="17" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.33281004">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-user/2.3.0/gwt-user-2.3.0-sources.jar!/com/google/web/bindery/autobean/shared/AutoBeanCodex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="136" selection-start="2801" selection-end="2801" vertical-scroll-proportion="0.0">
+        <state line="26" column="13" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.33281004">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/nooon/szakdolgozat/Application.gwt.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="49" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
+        <state line="4" column="52" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/nooon/szakdolgozat/public/Application.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/shared/overlay/IDummyServerAutoBeanFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="148" selection-start="761" selection-end="761" vertical-scroll-proportion="-10.666667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-user/2.2.0/gwt-user-2.2.0-sources.jar!/com/google/gwt/user/server/rpc/RemoteServiceServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="13" selection-start="1413" selection-end="1413" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/thirdparty/JSONRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/own/dummy/DummyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="14" selection-start="331" selection-end="331" vertical-scroll-proportion="0.0">
+        <state line="7" column="23" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/rpc/own/dummy/DummyServiceAsync.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="47" selection-start="357" selection-end="357" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/mvp/view/home/Home.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="46" selection-start="1862" selection-end="1862" vertical-scroll-proportion="0.0">
+        <state line="55" column="69" selection-start="2175" selection-end="2175" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/server/rpc/own/dummy/DummyServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/shared/overlay/IDummyServerRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="14" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="2" column="17" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-user/2.2.0/gwt-user-2.2.0-sources.jar!/com/google/gwt/json/client/JSONObject.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nooon/szakdolgozat/client/shared/overlay/IDummyServerResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="16" selection-start="1634" selection-end="1634" vertical-scroll-proportion="-1.0518054">
+        <state line="4" column="36" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-dev/2.3.0/gwt-dev-2.3.0.jar!/com/google/gwt/dev/shell/CompilingClassLoader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="19" selection-start="168" selection-end="168" vertical-scroll-proportion="0.11308562">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-dev/2.3.0/gwt-dev-2.3.0-sources.jar!/com/google/gwt/dev/shell/CompilingClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="364" column="30" selection-start="13212" selection-end="13212" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="55" selection-start="3707" selection-end="3707" vertical-scroll-proportion="0.36225265">
           <folding />
         </state>
       </provider>

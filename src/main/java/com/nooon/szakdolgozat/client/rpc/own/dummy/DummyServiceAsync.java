@@ -7,6 +7,6 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
 public interface DummyServiceAsync {
 
-    void dummyFunction(AsyncCallback<JSONObject> callback);
+    void dummyFunction(String paramJson, AsyncCallback<String> callback);
 
 }

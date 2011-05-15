@@ -2,13 +2,7 @@
 <module rename-to="szakdolgozat">
 
     <inherits name='com.google.gwt.user.User'/>
-    <inherits name='com.google.gwt.json.JSON'/>
-
-    <!--<inherits name='com.google.gwt.i18n.I18N'/>-->
-    <!--<inherits name="com.google.gwt.resources.Resources" />-->
-    <!--<inherits name="com.google.gwt.inject.Inject"/>-->
-    <!--<inherits name='com.kfuntak.gwt.json.serialization.GWTProJsonSerializer'/>-->
-
+    <inherits name="com.google.web.bindery.autobean.AutoBean"/>
 
     <entry-point class='com.nooon.szakdolgozat.client.Application'/>
 </module>
