@@ -1,13 +1,11 @@
-package com.nooon.szakdolgozat.client.mvp.model.visualprocess;
+package com.nooon.szakdolgozat.client.mvp.model.animation.impl;
 
 
 import com.google.gwt.user.client.ui.AbsolutePanel;
 import com.google.gwt.user.client.ui.Widget;
+import com.nooon.szakdolgozat.client.mvp.model.animation.SiteAnimation;
 import com.nooon.szakdolgozat.client.mvp.model.sitecallback.SiteCallback;
 
-/**
- * @author racka
- */
 public class ScrollAnimation extends SiteAnimation {
 
     private int startX;

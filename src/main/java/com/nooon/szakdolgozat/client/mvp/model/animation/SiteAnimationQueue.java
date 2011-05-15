@@ -1,16 +1,14 @@
-package com.nooon.szakdolgozat.client.mvp.model.visualprocess.impl.animation;
+package com.nooon.szakdolgozat.client.mvp.model.animation;
 
 import com.nooon.szakdolgozat.client.mvp.model.sitecallback.SiteCallback;
 import com.nooon.szakdolgozat.client.mvp.model.state.HasState;
 import com.nooon.szakdolgozat.client.mvp.model.state.WebComponentState;
-import com.nooon.szakdolgozat.client.mvp.model.visualprocess.SiteAnimation;
-import com.nooon.szakdolgozat.client.mvp.model.visualprocess.VisualProcess;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ListIterator;
 
-public class SiteAnimationQueue implements VisualProcess, HasState {
+public class SiteAnimationQueue implements HasState {
 
     private List<SiteAnimation> queue = new ArrayList<SiteAnimation>();
     private WebComponentState state;

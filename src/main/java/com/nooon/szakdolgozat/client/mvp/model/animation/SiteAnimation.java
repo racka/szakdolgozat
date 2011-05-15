@@ -1,8 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.nooon.szakdolgozat.client.mvp.model.visualprocess.impl.animation;
+package com.nooon.szakdolgozat.client.mvp.model.animation;
 
 import com.google.gwt.animation.client.Animation;
 import com.google.gwt.user.client.ui.AbsolutePanel;
@@ -10,13 +6,8 @@ import com.google.gwt.user.client.ui.Widget;
 import com.nooon.szakdolgozat.client.mvp.model.sitecallback.SiteCallback;
 import com.nooon.szakdolgozat.client.mvp.model.state.HasState;
 import com.nooon.szakdolgozat.client.mvp.model.state.WebComponentState;
-import com.nooon.szakdolgozat.client.mvp.model.visualprocess.VisualProcess;
 
-/**
- *
- * @author racka
- */
-public abstract class SiteAnimation extends Animation implements VisualProcess, HasState {
+public abstract class SiteAnimation extends Animation implements HasState {
 
     protected AbsolutePanel container;
     protected Widget target;
@@ -31,38 +22,8 @@ public abstract class SiteAnimation extends Animation implements VisualProcess, 
         this.duration = duration;
     }
 
-    public void processLogic(double progress) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    public void setProcessDuration() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    public void setTarget() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    public void start() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-
-
     public void setCallback(SiteCallback callback) {
         this.callback = callback;
-    }
-
-    public void setContainer(AbsolutePanel container) {
-        this.container = container;
-    }
-
-    public void setTarget(Widget target) {
-        this.target = target;
-    }
-
-    public void setDuration(int duration) {
-        this.duration = duration;
     }
 
     public abstract void animationLogic(double progress);
@@ -78,8 +39,8 @@ public abstract class SiteAnimation extends Animation implements VisualProcess, 
      */
     @Override
     protected void onStart() {
-        setState(WebComponentState.BUSY);
         super.onStart();
+        setState(WebComponentState.BUSY);
     }
 
     /**
@@ -97,11 +58,11 @@ public abstract class SiteAnimation extends Animation implements VisualProcess, 
      */
     @Override
     protected void onComplete() {
+        super.onComplete();
         if (callback != null) {
             callback.callback();
         }
         setState(WebComponentState.AVAILABLE);
-        super.onComplete();
     }
 
     /**

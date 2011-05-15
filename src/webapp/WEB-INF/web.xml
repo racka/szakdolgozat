@@ -27,7 +27,7 @@
     <!-- sajat service -->
     <servlet>
         <servlet-name>dummyServiceImpl</servlet-name>
-        <servlet-class>com.nooon.szakdolgozat.server.rpc.own.dummy.DummyServiceImpl</servlet-class>
+        <servlet-class>com.nooon.szakdolgozat.server.rpc.local.dummy.DummyServiceImpl</servlet-class>
     </servlet>
 
     <!-- XSRF token service mapping -->

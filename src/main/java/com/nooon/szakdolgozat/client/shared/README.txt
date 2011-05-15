@@ -1,0 +1,1 @@
+A kliens es szerver oldalon egyarant megjeleno tipusok

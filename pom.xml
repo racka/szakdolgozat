@@ -28,6 +28,7 @@
     </pluginRepositories>
 
     <build>
+
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -39,45 +40,25 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-        <plugins>
-            <!-- maybe for the reactor plugin. this is the war module, where other sources needs to be pulled -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <version>1.5</version>
-                <executions>
-                    <execution>
-                        <id>add-source</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>add-source</goal>
-                        </goals>
-                        <configuration>
-                            <sources>
-                                <source>src/main/java</source>
-                                <source>src/main/resources</source>
-                            </sources>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
 
+        <plugins>
+
+            <!-- a war osszeallitasa -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
-                    <warSourceDirectory>${basedir}/war</warSourceDirectory>
-                    <webXml>${basedir}/war/WEB-INF/web.xml</webXml>
+                    <warSourceDirectory>${basedir}/src/webapp</warSourceDirectory>
+                    <webXml>${basedir}/src/webapp/WEB-INF/web.xml</webXml>
                 </configuration>
             </plugin>
 
-
+            <!-- GWT compiler hivasa -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>gwt-maven-plugin</artifactId>
                 <version>2.2.0</version>
                 <configuration>
-                    <gwtVersion>${gwt.version}</gwtVersion>
                     <disableCastChecking>true</disableCastChecking>
                     <disableClassMetadata>true</disableClassMetadata>
                     <extraJvmArgs>-Xmx512M -Xss1024k -Dgwt.nowarn.legacy.tools</extraJvmArgs>
@@ -102,6 +83,7 @@
                         <version>${gwt.version}</version>
                     </dependency>
                 </dependencies>
+                <!-- bekotes a maven build lifecycle-be -->
                 <executions>
                     <execution>
                         <id>compile-gwt</id>
@@ -144,6 +126,7 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- appengine sdk -->
         <dependency>
             <groupId>com.google.appengine</groupId>
             <artifactId>appengine-api-1.0-sdk</artifactId>

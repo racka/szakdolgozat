@@ -1,4 +1,4 @@
-package com.nooon.szakdolgozat.client.rpc.own.dummy;
+package com.nooon.szakdolgozat.client.rpc.local.dummy;
 
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;

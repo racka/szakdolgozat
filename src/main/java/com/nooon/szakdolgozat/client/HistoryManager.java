@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.nooon.szakdolgozat.client;
 
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
@@ -12,10 +8,6 @@ import com.nooon.szakdolgozat.client.mvp.presenter.Presenter;
 import com.nooon.szakdolgozat.client.mvp.presenter.PresenterImpl;
 import com.nooon.szakdolgozat.client.mvp.view.ViewImpl;
 
-/**
- *
- * @author racka
- */
 public class HistoryManager implements Presenter, ValueChangeHandler<String> {
 
     private static final String MAIN_PAGE_ID = "mainPage";
