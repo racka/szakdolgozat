@@ -100,19 +100,14 @@
     </build>
 
     <dependencies>
-        <!--
-              JavaScript client-only libraries marked provided so we don't pull
-              them in elsewhere as transitive dependencies of this project. The
-              GWT-compiled JavaScript should provide a sufficient representation of
-              their code.
-          -->
+        <!-- JavaScript client-only library-k "provided" scope-ban vannak -->
         <dependency>
             <groupId>com.google.gwt</groupId>
             <artifactId>gwt-user</artifactId>
             <version>${gwt.version}</version>
             <scope>provided</scope>
         </dependency>
-        <!-- Server-side dependencies, but may also be used on client side -->
+        <!-- Server-side dependenciak, amit kliens oldalon is hasznalhatunk, megfelelo "inherit" hasznalattal -->
         <dependency>
             <groupId>com.google.gwt</groupId>
             <artifactId>gwt-servlet</artifactId>

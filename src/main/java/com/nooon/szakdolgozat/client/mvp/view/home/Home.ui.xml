@@ -6,12 +6,19 @@
 
     <ui:with field='clientBundle' type='com.nooon.szakdolgozat.client.resource.bundle.SzakdolgozatClientBundle'/>
 
-    <g:AbsolutePanel ui:field="mainAbsolutePanel" styleName="{style.main}">
+    <g:AbsolutePanel ui:field="mainAbsolutePanel">
 
-        <!--
-        <g:Image resource="{clientBundle.forumJpg}"/>
-        -->
-        <g:Image url="http://code.google.com/appengine/images/appengine-silver-120x30.gif" styleName="{style.appengine}"/>
+        <g:FlowPanel ui:field="mainFlowPanel">
+
+            <g:VerticalPanel>
+                <g:HorizontalPanel styleName="{style.inputRow}">
+                    <g:Label styleName="{style.caption}">Azonosító:</g:Label>
+                    <g:TextBox ui:field="userNameInput"/>
+                </g:HorizontalPanel>
+                <g:Button ui:field="loginButton" styleName="{style.inputButton}" text="Belépés"/>
+            </g:VerticalPanel>
+
+        </g:FlowPanel>
 
     </g:AbsolutePanel>
 

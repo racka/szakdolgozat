@@ -1,10 +1,5 @@
 @def maxWidth 100%;
 @def maxHeight 100%;
 
-@def clientFrameWidht 370px;
-@def clientFrameHeight 400px;
-
-@def menuImagesWidth 270px;
-@def menuImagesHeight 400px;
-
-@def bodyBackgroundColor black;
+@def loginModalWidth 30em;
+@def loginModalHeight 30em;
