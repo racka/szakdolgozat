@@ -4,5 +4,10 @@
     <inherits name='com.google.gwt.user.User'/>
     <inherits name="com.google.web.bindery.autobean.AutoBean"/>
 
+    <!--<define-configuration-property name="UiBinder.useSafeHtmlTemplates"-->
+    <!--is-multi-valued="false"/>-->
+    <set-configuration-property name="UiBinder.useSafeHtmlTemplates"
+    value="true"/>
+
     <entry-point class='com.nooon.szakdolgozat.client.Application'/>
 </module>

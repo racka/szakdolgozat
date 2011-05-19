@@ -29,19 +29,15 @@
 
     <build>
 
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <configuration>
-                        <source>1.5</source>
-                        <target>1.5</target>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-
         <plugins>
+
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
 
             <!-- a war osszeallitasa -->
             <plugin>
@@ -81,6 +77,11 @@
                         <groupId>com.google.gwt</groupId>
                         <artifactId>gwt-servlet</artifactId>
                         <version>${gwt.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.doxia</groupId>
+                        <artifactId>doxia-sink-api</artifactId>
+                        <version>1.2</version>
                     </dependency>
                 </dependencies>
                 <!-- bekotes a maven build lifecycle-be -->
