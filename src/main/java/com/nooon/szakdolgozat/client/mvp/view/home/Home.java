@@ -69,6 +69,7 @@ public class Home extends Composite {
     public Home() {
         initWidget(uiBinder.createAndBindUi(this));
 
+        // a kezdeti meret beallitasa (a css-bol orokolt meret mellett egy workaround)
         mainAbsolutePanel.setSize(CSS.maxWidth(), CSS.maxHeight());
         transparentDiv.getElement().getStyle().setZIndex(-1);
         transparentDiv.setVisible(false);
@@ -87,7 +88,7 @@ public class Home extends Composite {
     public Button loginButton;
 
     /**
-     *
+     *  a bejelentkezesi resz inicializalasa
      */
     private void createLoginPanel() {
         loginContainer.getElement().getStyle().setZIndex(1);
@@ -107,7 +108,7 @@ public class Home extends Composite {
     public AddAppointment addAppointment;
 
     /**
-     *
+     *  a naptar resz inicializalasa
      */
     private void createCalendar() {
         calendarContainer.setSize(CSS.calendarWidth(), CSS.calendarHeight());
@@ -118,19 +119,21 @@ public class Home extends Composite {
         calendar.setDays(7);
         calendar.setSize(CSS.calendarWidth(), CSS.calendarHeight());
 
+        // a naptar egy cellajaba valo click logikaja
         calendar.addTimeBlockClickHandler(new TimeBlockClickHandler<Date>() {
             public void onTimeBlockClick(TimeBlockClickEvent<Date> event) {
                 timeBlockClickAction(event);
             }
         });
 
+        // bejegyzes modositasanak logikaja
         calendar.addUpdateHandler(new UpdateHandler<Appointment>() {
             public void onUpdate(UpdateEvent<Appointment> event) {
                 boolean commit = Window.confirm(
-                        "Are you sure you want to update the appointment \""
+                        "Biztosan frissíti a bejegyzést? \""
                                 + event.getTarget().getTitle() + "\"");
                 if (!commit) {
-                    event.setCancelled(true); //Cancel Appointment update
+                    event.setCancelled(true);
                 }
             }
         });
@@ -140,6 +143,10 @@ public class Home extends Composite {
                 , Window.getClientWidth() / 2 - 512
                 , Window.getClientHeight() / 2 - 250);
 
+        // bejegyzes "popup" inicializalasa
+        // ez a resz egy transzparens div elott jelenik meg
+        // mint egy modal ablak, a callback fv. a bezarasakor
+        // ervenyes ui logikat definialja
         addAppointment.setCalendar(calendar);
         addAppointment.setCallback(new SiteCallback() {
             public void callback() {
@@ -155,6 +162,7 @@ public class Home extends Composite {
     }
 
     /**
+     * a naptar egy cellajaba valo click logikaja
      *
      * @param event
      */
@@ -208,6 +216,7 @@ public class Home extends Composite {
         // token igenyles
         xsrf.getNewXsrfToken(new AsyncCallback<XsrfToken>() {
 
+            // ha megkaptuk a token-t, akkor a service hivasa
             public void onSuccess(XsrfToken token) {
                 ((HasRpcToken) dummyService).setRpcToken(token);
                 dummyServiceInvocation(identifier);
