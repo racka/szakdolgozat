@@ -84,8 +84,6 @@ public class Home extends Composite {
     public HTMLPanel loginContainer;
     @UiField
     public TextBox userNameInput;
-    @UiField
-    public Button loginButton;
 
     /**
      *  a bejelentkezesi resz inicializalasa
@@ -182,6 +180,9 @@ public class Home extends Composite {
 
     }
 
+
+    @UiField
+    public Button loginButton;
 
     /**
      * @param e
