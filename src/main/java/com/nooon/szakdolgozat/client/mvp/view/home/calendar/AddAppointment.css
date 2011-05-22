@@ -1,0 +1,23 @@
+.mainFrame {
+    border: 1px solid;
+    padding: 5px;
+    width: 350px;
+    height: 200px;
+    background: white;
+}
+
+
+.header {
+    left: auto;
+    right: auto;
+    width: auto;
+}
+
+.verticalSpacing {
+    padding-bottom: 10px;
+    align: center;
+}
+
+.caption {
+    padding-right: 10px;
+}

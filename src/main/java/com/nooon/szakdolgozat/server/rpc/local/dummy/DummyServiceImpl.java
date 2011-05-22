@@ -23,7 +23,7 @@ public class DummyServiceImpl extends XsrfProtectedServiceServlet implements Dum
         // a valasz osszeallitasa
         AutoBean<IDummyServiceResponse> requestAutoBean = abFactory.response();
         IDummyServiceResponse response = requestAutoBean.as();
-        response.setResponse("Hello " + request.getRequestParameter() + ", code injection mentes és XSRF védelem alatti kommunikáció megtörtént!!");
+        response.setResponse(request.getRequestParameter() + " XSRF védelem alatt.");
 
         // a valasz serializalasa
         AutoBean<IDummyServiceResponse> controller = AutoBeanUtils.getAutoBean(response);

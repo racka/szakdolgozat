@@ -1,6 +1,7 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
-             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:my='urn:import:com.nooon.szakdolgozat.client.mvp.view.home.calendar'>
 
     <ui:style src="Home.css"/>
 
@@ -8,17 +9,21 @@
 
     <g:AbsolutePanel ui:field="mainAbsolutePanel">
 
-        <g:FlowPanel ui:field="mainFlowPanel">
+        <g:HTMLPanel ui:field="transparentDiv" styleName="{style.transparentDiv}"/>
 
-            <g:VerticalPanel>
-                <g:HorizontalPanel styleName="{style.inputRow}">
-                    <g:Label styleName="{style.caption}">Azonosító:</g:Label>
-                    <g:TextBox ui:field="userNameInput"/>
-                </g:HorizontalPanel>
-                <g:Button ui:field="loginButton" styleName="{style.inputButton}" text="Belépés"/>
-            </g:VerticalPanel>
+        <g:HTMLPanel ui:field="loginContainer">
+            <g:HorizontalPanel>
+                <g:Label styleName="{style.caption}">Azonosító:</g:Label>
+                <g:TextBox ui:field="userNameInput"/>
+                <g:Button ui:field="loginButton" text="Belépés"/>
+            </g:HorizontalPanel>
+        </g:HTMLPanel>
 
-        </g:FlowPanel>
+        <g:HTMLPanel ui:field="calendarContainer" styleName="{style.container}">
+            <g:Label ui:field="calendarHeader" styleName="{style.calendarHeader}"/>
+        </g:HTMLPanel>
+
+        <my:AddAppointment ui:field="addAppointment"/>
 
     </g:AbsolutePanel>
 

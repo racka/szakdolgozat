@@ -7,6 +7,12 @@ public interface SzakdolgozatStyleSheet extends CssResource {
     String maxWidth();
     String maxHeight();
 
-    String loginModalWidth();
-    String loginModalHeight();
+//    String loginModalWidth();
+//    String loginModalHeight();
+//
+    String calendarWidth();
+    String calendarHeight();
+
+    String addAppVerticalWidth();
+    String addAppVerticalHeight();
 }

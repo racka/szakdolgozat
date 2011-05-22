@@ -237,6 +237,20 @@
         <root url="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-user/2.3.0/gwt-user-2.3.0-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: gwtCal:gwtCal:1.0">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/src/webapp/WEB-INF/lib/gwt-cal-0.9.2.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="Maven: gwtDnd:gwtDnd:1.0">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/src/webapp/WEB-INF/lib/gwt-dnd-3.1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
     <library name="Maven: javax.validation:validation-api:1.0.0.GA">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA.jar!/" />

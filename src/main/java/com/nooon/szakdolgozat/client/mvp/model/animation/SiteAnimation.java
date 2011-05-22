@@ -7,6 +7,7 @@ import com.nooon.szakdolgozat.client.mvp.model.sitecallback.SiteCallback;
 import com.nooon.szakdolgozat.client.mvp.model.state.HasState;
 import com.nooon.szakdolgozat.client.mvp.model.state.WebComponentState;
 
+
 public abstract class SiteAnimation extends Animation implements HasState {
 
     protected AbsolutePanel container;
@@ -18,6 +19,17 @@ public abstract class SiteAnimation extends Animation implements HasState {
     public SiteAnimation(AbsolutePanel container, Widget target, SiteCallback callback, int duration) {
         this.container = container;
         this.target = target;
+        this.callback = callback;
+        this.duration = duration;
+    }
+
+    protected SiteAnimation(Widget target, SiteCallback callback, int duration) {
+        this.target = target;
+        this.callback = callback;
+        this.duration = duration;
+    }
+
+    protected SiteAnimation(SiteCallback callback, int duration) {
         this.callback = callback;
         this.duration = duration;
     }

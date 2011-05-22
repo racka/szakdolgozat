@@ -3,3 +3,9 @@
 
 @def loginModalWidth 30em;
 @def loginModalHeight 30em;
+
+@def calendarWidth 1024px;
+@def calendarHeight 500px;
+
+@def addAppVerticalWidth 350px;
+@def addAppVerticalHeight 200px;
